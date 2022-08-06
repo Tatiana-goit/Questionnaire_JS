@@ -36,6 +36,7 @@
     })
   }
 
+  
   function clickReply() {
     const checedRadioBtn = listContainer.querySelector('input:checked')
 
