@@ -8,14 +8,27 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="quiz">
+    <div class="start">
+      <p class="title">Приветствие</p>
+      <button class="simpleTest">Простой тест</button>
+      <button class="difficultTest">Сложный тест</button>
+    </div>
+    <div class="quiz quiz-active">
       <div class="quiz-header"></div>
-
       <ul class="quiz-list"></ul>
-
       <button class="quiz-submit submit">Ответить</button>
+      <button class="preliminaryResults">Вы хотите увидеть результаты?</button>
+    </div>
+    <div class="result">
+      <h3 class="summary">Поздравляем</h3>
+      <div class="resultInfo"></div>
+      <button class="newStart">Run the test again</button>
     </div>
 
-    <script src="./index.js" type="module"></script>
+     
+
+    <script src="./js/start.js" type="module"></script>
+    <script src="./js/test.js" type="module"></script>
+    <script src="./js/result.js" type="module"></script>
   </body>
 </html>

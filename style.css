@@ -17,9 +17,9 @@ body {
 }
 
 .quiz {
+	display: none;
 	position: relative;
 	padding: 2rem 2rem calc(2rem + 70px);
-
 	background-color: #fff;
 	border-radius: 8px;
 	box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
@@ -162,3 +162,11 @@ body {
 		transform: translate3d(4px, 0, 0);
 	}
 }
+
+.preliminaryResults {
+	display: none;
+}
+.result {
+	display: none;
+}
+

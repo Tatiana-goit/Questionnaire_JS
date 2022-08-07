@@ -1,13 +1,16 @@
-  import questions from "./info.json" assert { type: "json" };
+  import questions from "../info.json" assert { type: "json" };
 
   const headerContainer = document.querySelector('.quiz-header')
   const listContainer = document.querySelector('.quiz-list')
   const submitBtn = document.querySelector('.quiz-submit')
+  const preliminaryResultsBtn = document.querySelector(".preliminaryResults")
 
-  let rightAnswer = 0
+
+  let rightAnswers = 0
   let questionIndex = 0
 
   submitBtn.addEventListener('click', () => clickReply())
+
 
   function clearPage() {
     headerContainer.innerHTML = ''
@@ -16,6 +19,7 @@
 
   function showQuestion() {
     // Question
+    console.log('ppppppppp0',questionIndex );
     const title = questions[questionIndex]['question']
     headerContainer.innerHTML = `<h2>${title}</h2>`
 
@@ -50,28 +54,27 @@
     const correctAnswer = questions[questionIndex]['correct']
 
     if (userAnswer === correctAnswer) {
-      rightAnswer++
-      console.log(rightAnswer)
+      rightAnswers++
     }
 
     if (questionIndex !== questions.length - 1) {
-      console.log('Не последний')
       questionIndex++
       clearPage()
       showQuestion()
-
+      console.log(questionIndex)
       return
     } else {
-      console.log('Последний вопрос')
       clearPage()
-      showResults()
-    }
+      console.log(questionIndex)
+      localStorage.setItem('sumRightAnswers', rightAnswers);
+      questionIndex = 0
+      console.log(questionIndex)
+      rightAnswers = 0
+      submitBtn.style.display="none"
+      preliminaryResultsBtn.style.display="block"
 
-    function showResults() {
-      console.log('Результаты')
-      headerContainer.innerHTML = `<h3 class="summary">Поздравляем</h3>
-      <p class="result">Ваш результат ${rightAnswer}</p>`
     }
   }
-  clearPage()
-  showQuestion()
+
+clearPage()
+showQuestion()
