@@ -19,7 +19,6 @@
 
   function showQuestion() {
     // Question
-    console.log('ppppppppp0',questionIndex );
     const title = questions[questionIndex]['question']
     headerContainer.innerHTML = `<h2>${title}</h2>`
 
@@ -61,18 +60,14 @@
       questionIndex++
       clearPage()
       showQuestion()
-      console.log(questionIndex)
       return
     } else {
       clearPage()
-      console.log(questionIndex)
       localStorage.setItem('sumRightAnswers', rightAnswers);
       questionIndex = 0
-      console.log(questionIndex)
       rightAnswers = 0
       submitBtn.style.display="none"
       preliminaryResultsBtn.style.display="block"
-
     }
   }
 

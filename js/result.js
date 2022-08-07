@@ -10,6 +10,7 @@ newStartBtn.addEventListener("click", () => newStart())
 
 function showResults() {
     quizPage.style.display = "none"
+    preliminaryResultsBtn.style.display = "none"
     resultPage.style.display = "block"
     let result = localStorage.getItem('sumRightAnswers');
     resultInfo.innerHTML = `<p class="resultText">Ваш результат ${result}</p>`
