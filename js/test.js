@@ -18,21 +18,17 @@ function clearPage() {
 function showQuestion() {
   // Question
   const title = questions[questionIndex]['question'];
-  headerContainer.innerHTML = `<h2>${title}</h2>`;
+  headerContainer.innerHTML = `<h2 class="quiz__title">${title}</h2>`;
 
   // Answers
-  questions.map((question, index) => {
-    const list = `<li  class="quiz-list__item">
-                              <label class="quiz-list__label">
-                                  <input type="radio" value=${
-                                    index + 1
-                                  } class="answer" name="answer" />
-                               <span class="quiz-list__answer">${[
-                                 question['answers'][index],
-                               ]}
-                               </span>
-                               </label>
-                      </li>`;
+  questions[questionIndex]["answers"].map((el, index) => {
+    const list = 
+    `<li  class="quiz-list__item">
+      <label class="quiz-list__label">
+        <input type="radio" value=${index + 1} class="answer"/>
+        <span class="quiz-list__answer">${el}</span>
+      </label>
+    </li>`;
     listContainer.innerHTML += list;
   });
 }
@@ -42,7 +38,7 @@ function clickReply() {
 
   if (!checedRadioBtn) {
     submitBtn.blur();
-    alert('Выберите вариант ответа');
+    alert('Choose an answer');
     return;
   }
 

@@ -11,6 +11,10 @@
   <body>
     <!-- -----START PAGE------- -->
     <div class="start__page">
+      <div class="clock__block">
+        <div class="clock"></div>
+        <div class="dateInfo"></div>
+      </div>
       <div class="start__form">
         <p class="start__title">
           Welcome to the site to test your knowledge of front-end development
@@ -36,7 +40,7 @@
       <div class="quiz quiz-active">
         <div class="quiz-header"></div>
         <ul class="quiz-list"></ul>
-        <button class="quiz__btn btn">Ответить</button>
+        <button class=" btn quiz__btn">Next question</button>
         <button class="btn quiz__preliminaryResults">
           The test is over. Click for result
         </button>
@@ -45,16 +49,15 @@
 
     <!-- -----RESULT PAGE------- -->
     <div class="result__page">
-      <div class="result__block">
-        <div class="start__form">
-          <h3 class="summary">Поздравляем</h3>
-          <div class="resultInfo"></div>
-          <button class="newStart">Run the test again</button>
-        </div>
+      <div class="start__form result__block">
+        <h3 class="result__title">Results</h3>
+        <div class="result__info"></div>
+        <button class="btn result-newStart__btn">Run the test again</button>
       </div>
     </div>
 
     <script src="./js/start.js" type="module"></script>
+    <script src="./js/clock.js" type="module"></script>
     <script src="./js/test.js" type="module"></script>
     <script src="./js/result.js" type="module"></script>
 

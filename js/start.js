@@ -17,3 +17,4 @@ function onClickdifficultTest(){
 
 simpleTestBtn.addEventListener("click", ()=>onClickSimpleTest())
 difficultTestBtn.addEventListener("click", ()=>onClickdifficultTest())
+

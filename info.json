@@ -1,26 +1,26 @@
 [
 	{
 		"id": 0,
-		"question": "Вопрос 1",
-		"answers": ["a", "b", "c", "d"],
+		"question": "Which event occurs when the user clicks on an HTML element?",
+		"answers": ["onmouseclick", "onchange", "onmouseover", "onclick"],
 		"correct": 4
 	},
 	{
 		"id": 1,
-		"question": "Вопрос 2",
-		"answers": ["a", "b", "c", "d"],
-		"correct": 2
+		"question": "How to hide element so it will not take up any space?",
+		"answers": ["Display:inline", "visibility:hidden", "display:none", "display:block"],
+		"correct": 3
 	},
 	{
 		"id": 2,
-		"question": "Вопрос 3",
-		"answers": ["a", "b", "c", "d"],
-		"correct": 1
+		"question": "What will be logged to the console? \nconsole.log(typeof \"true\")",
+		"answers": ["NaN", "string", "true", "Boolean"],
+		"correct": 2
 	},
 	{
 		"id": 3,
 		"question": "Вопрос 4",
-		"answers": ["a", "b", "c", "d"],
-		"correct": 2
+		"answers": ["4a", "4b", "4c", "4d"],
+		"correct": 4
 	}
 ]
