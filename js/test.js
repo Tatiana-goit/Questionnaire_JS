@@ -25,7 +25,7 @@ function showQuestion() {
     const list = 
     `<li  class="quiz-list__item">
       <label class="quiz-list__label">
-        <input type="radio" value=${index + 1} class="answer"/>
+        <input type="radio" value=${index + 1} class="answer" name="answer"/>
         <span class="quiz-list__answer">${el}</span>
       </label>
     </li>`;

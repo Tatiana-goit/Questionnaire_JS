@@ -11,7 +11,8 @@ newStartBtn.addEventListener("click", () => newStart())
 function showResults() {
     quizPage.style.display = "none"
     preliminaryResultsBtn.style.display = "none"
-    resultPage.style.display = "flex"
+    resultPage.style.display = "block"
+    console.log(11111111111111111111111111111111111)
     let result = localStorage.getItem('sumRightAnswers');
     resultInfo.innerHTML = `<p class="result__text">${result} of 4</p>
     <p class="result__percent">${result*100/4} %</p>
