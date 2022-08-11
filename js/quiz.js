@@ -1,15 +1,21 @@
-import questions from "../info.json" assert { type: "json" };
+// import questions from "../info.json" assert { type: "json" };
 
-const quizPage = document.querySelector(".quiz__page")
-const confirmationPage = document.querySelector(".confirmation__page")
+const quizPage = document.querySelector('.quiz__page');
+const confirmationPage = document.querySelector('.confirmation__page');
 const headerContainer = document.querySelector('.quiz-header');
 const listContainer = document.querySelector('.quiz-list');
 const submitBtn = document.querySelector('.quiz__btn');
 
 let rightAnswers = 0;
 let questionIndex = 0;
+let index = 0;
+let arrayOfAnswers = [];
 
-submitBtn.addEventListener('click', () => clickReply());
+submitBtn.addEventListener('click', () => onClickReply());
+
+const questions = await fetch(
+  `https://62ecf1bba785760e6760a342.mockapi.io/quiz`,
+).then(res => res.json());
 
 function clearPage() {
   headerContainer.innerHTML = '';
@@ -22,11 +28,12 @@ function showQuestion() {
   headerContainer.innerHTML = `<h2 class="quiz__title">${title}</h2>`;
 
   // Answers
-  questions[questionIndex]["answers"].map((el, index) => {
-    const list = 
-    `<li  class="quiz-list__item">
+  questions[questionIndex]['answers'].map((el, i) => {
+    const list = `<li  class="quiz-list__item">
       <label class="quiz-list__label">
-        <input type="radio" value=${index + 1} class="quiz-list__input" name="answer"/>
+        <input type="radio" value=${
+          i + 1
+        } class="quiz-list__input" name="answer"/>
         <span class="quiz-list__answer">${el}</span>
       </label>
     </li>`;
@@ -34,7 +41,7 @@ function showQuestion() {
   });
 }
 
-function clickReply() {
+function onClickReply() {
   const checedRadioBtn = listContainer.querySelector('input:checked');
 
   if (!checedRadioBtn) {
@@ -57,20 +64,25 @@ function clickReply() {
     return;
   } else {
     clearPage();
-    localStorage.setItem('rightAnswers', rightAnswers);
+
+    if (arrayOfAnswers.length !== 0) {
+      JSON.parse(localStorage.getItem('nameOfArray'));
+    }
+    arrayOfAnswers.push(rightAnswers);
+    localStorage.setItem('nameOfArray', JSON.stringify(arrayOfAnswers));
+
     quizPage.style.display = 'none';
     confirmationPage.style.display = 'block';
+
     rightAnswers = 0;
     questionIndex = 0;
+
     showQuestion();
   }
 }
 
 clearPage();
 showQuestion();
-
-
-
 
 // const URL =
 //   'https://docs.google.com/spreadsheets/d/e/2PACX-1vT15nH81WQdOfeDMIwFoHUbDYeiYzK8JdmEd9_Ui2aHWtNWD3s1spHszZxrGI2LgG9bAzBe5ZXd0iRY/pub?gid=0&single=true&output=tsv';

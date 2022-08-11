@@ -8,13 +8,13 @@
 	{
 		"id": 1,
 		"question": "How to hide element so it will not take up any space?",
-		"answers": ["Display:inline", "visibility:hidden", "display:none", "display:block"],
+		"answers": ["display:inline", "visibility:hidden", "display:none", "display:block"],
 		"correct": 3
 	},
 	{
 		"id": 2,
 		"question": "What will be logged to the console? \nconsole.log(typeof \"true\")",
-		"answers": ["NaN", "string", "true", "Boolean"],
+		"answers": ["NaN", "string", "true", "boolean"],
 		"correct": 2
 	},
 	{

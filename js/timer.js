@@ -4,10 +4,10 @@ const confirmationPage = document.querySelector('.confirmation__page');
 const simpleTestBtn = document.querySelector('.simpleTest');
 const confirmationBtn = document.querySelector('.confirmation__btn');
 
-simpleTestBtn.addEventListener('click', () => Timer());
+simpleTestBtn.addEventListener('click', () => startTimer());
 
-function Timer() {
-  let time = 10;
+function startTimer() {
+  let time = 240;
   timeEl.innerHTML = `00:00`;
   let timerId = setInterval(() => {
     let minutes = Math.floor(time / 60);

@@ -2,7 +2,6 @@ const confirmationPage = document.querySelector('.confirmation__page');
 const resultPage = document.querySelector('.result__page');
 const confirmationBtn = document.querySelector('.confirmation__btn');
 const resultInfo = document.querySelector('.result__info');
-const result__comment = document.querySelector('.result__comment');
 
 confirmationBtn.addEventListener('click', () => moveToResult());
 
@@ -10,8 +9,8 @@ function moveToResult() {
   confirmationPage.style.display = 'none';
   resultPage.style.display = 'block';
 
-  localStorage.getItem('rightAnswers');
-  let result = localStorage.getItem('rightAnswers');
+  let arrayOfAnswers = JSON.parse(localStorage.getItem('nameOfArray'));
+  let result = arrayOfAnswers[arrayOfAnswers.length-1]
   let persentResult = (result * 100) / 4;
 
   let comment = '';

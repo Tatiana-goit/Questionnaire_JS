@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz</title>
-    <link rel="icon" href="./image/favicon.png" type="image/png">	
+    <link rel="icon" href="./image/favicon.png" type="image/png" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/normalize.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    </head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
   <body>
     <!-------START PAGE--------->
     <div class="start__page">
@@ -69,17 +72,24 @@
         <div class="result__info"></div>
         <button class="btn result-newStart__btn">Run the test again</button>
       </div>
+      <div class="lastResult">
+        <button class="btn lastResult__btn">Last result</button>
+        <div class="lastResult__modal">
+          <h3 class="lastResult__title">Last results</h3>
+          <ul class="lastResult__list"></ul>
+        </div>
+      </div>
     </div>
 
     <script src="./js/start.js" type="module"></script>
     <script src="./js/clock.js" type="module"></script>
     <script src="./js/quiz.js" type="module"></script>
-    <!-- <script src="./js/timer.js" type="module"></script> -->
+    <script src="./js/timer.js" type="module"></script>
     <script src="./js/confirmation.js" type="module"></script>
     <script src="./js/result.js" type="module"></script>
 
     <script src="./js/three.min.js"></script>
     <script src="./js/vanta.waves.min.js"></script>
     <script src="./js/app.js"></script>
-    </body>
+  </body>
 </html>

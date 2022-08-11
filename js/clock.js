@@ -5,7 +5,7 @@ window.onload = function () {
       let minutes = date.getMinutes();
       let seconds = date.getSeconds();
       if (hours < 10) {
-        hours = `0${sehoursconds}`;
+        hours = `0${hours}`;
       }
       if (minutes < 10) {
         minutes = `0${minutes}`;
