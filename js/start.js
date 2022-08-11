@@ -5,7 +5,9 @@ const difficultTestBtn = document.querySelector(".difficultTest")
 
 function onClickSimpleTest() {
     startPage.style.display = "none"
-    quizPage.style.display = "flex"
+    quizPage.style.display = "block"
+    // showQuestion()
+ 
 }
 
 function onClickdifficultTest(){

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./styles/normalize.css" />
   </head>
   <body>
-    <!-- -----START PAGE------- -->
+    <!-------START PAGE--------->
     <div class="start__page">
       <div class="clock__block">
         <div class="clock"></div>
@@ -35,26 +35,32 @@
       </div>
     </div>
 
-    <!-- -----QUIZ PAGE------- -->
+    <!-------QUIZ PAGE--------->
     <div class="quiz__page">
       <div class="quiz quiz-active">
         <div class="quiz-header"></div>
         <ul class="quiz-list"></ul>
         <button class="btn quiz__btn">Next question</button>
-        <button class="btn quiz__preliminaryResults">
-          The test is over. Click for result
-        </button>
       </div>
-      <!-- -----------TIMER-------- -->
+      <!---------TIMER----->
       <div class="timer__block">
-         <div class="timer">
+        <div class="timer">
           <span class="timer__title">Time</span>
           <div class="time"></div>
-         </div>
+        </div>
       </div>
     </div>
 
-    <!-- -----RESULT PAGE------- -->
+    <!-------CONFIRMATION PAGE--------->
+    <div class="confirmation__page">
+      <div class="confirmation">
+        <button class="btn confirmation__btn">
+          The test is over. Click for result
+        </button>
+      </div>
+    </div>
+
+    <!-------RESULT PAGE--------->
     <div class="result__page">
       <div class="start__form result__block">
         <h3 class="result__title">Results</h3>
@@ -66,7 +72,8 @@
     <script src="./js/start.js" type="module"></script>
     <script src="./js/clock.js" type="module"></script>
     <script src="./js/quiz.js" type="module"></script>
-    <script src="./js/timer.js" type="module"></script>
+    <!-- <script src="./js/timer.js" type="module"></script> -->
+    <script src="./js/confirmation.js" type="module"></script>
     <script src="./js/result.js" type="module"></script>
 
     <script src="./js/three.min.js"></script>

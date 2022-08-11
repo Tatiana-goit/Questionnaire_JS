@@ -1,9 +1,12 @@
 import questions from "../info.json" assert { type: "json" };
 
+const quizPage = document.querySelector(".quiz__page")
+const confirmationPage = document.querySelector(".confirmation__page")
 const headerContainer = document.querySelector('.quiz-header');
 const listContainer = document.querySelector('.quiz-list');
 const submitBtn = document.querySelector('.quiz__btn');
-const preliminaryResultsBtn = document.querySelector('.quiz__preliminaryResults');
+
+console.log("come in");
 
 let rightAnswers = 0;
 let questionIndex = 0;
@@ -13,12 +16,14 @@ submitBtn.addEventListener('click', () => clickReply());
 function clearPage() {
   headerContainer.innerHTML = '';
   listContainer.innerHTML = '';
+  console.log("clear");
 }
 
 function showQuestion() {
   // Question
   const title = questions[questionIndex]['question'];
   headerContainer.innerHTML = `<h2 class="quiz__title">${title}</h2>`;
+  console.log("qa");
 
   // Answers
   questions[questionIndex]["answers"].map((el, index) => {
@@ -56,16 +61,19 @@ function clickReply() {
     return;
   } else {
     clearPage();
-    localStorage.setItem('sumRightAnswers', rightAnswers);
-    questionIndex = 0;
+    localStorage.setItem('rightAnswers', rightAnswers);
+    quizPage.style.display = 'none';
+    confirmationPage.style.display = 'block';
     rightAnswers = 0;
-    submitBtn.style.display = 'none';
-    preliminaryResultsBtn.style.display = 'block';
+    questionIndex = 0;
+    console.log("go out")
+    showQuestion();
   }
 }
 
 clearPage();
 showQuestion();
+
 
 
 
