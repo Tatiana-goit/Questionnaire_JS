@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz</title>
+    <link rel="icon" href="./image/favicon.png" type="image/png">	
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/normalize.css" />
-  </head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    </head>
   <body>
     <!-------START PAGE--------->
     <div class="start__page">
@@ -15,7 +17,7 @@
         <div class="clock"></div>
         <div class="dateInfo"></div>
       </div>
-      <div class="start__form">
+      <div class="block start__block">
         <p class="start__title">
           Welcome to the site to test your knowledge of front-end development
         </p>
@@ -36,8 +38,8 @@
     </div>
 
     <!-------QUIZ PAGE--------->
-    <div class="quiz__page">
-      <div class="quiz quiz-active">
+    <div class="page quiz__page">
+      <div class="block quiz__block quiz-active">
         <div class="quiz-header"></div>
         <ul class="quiz-list"></ul>
         <button class="btn quiz__btn">Next question</button>
@@ -52,8 +54,8 @@
     </div>
 
     <!-------CONFIRMATION PAGE--------->
-    <div class="confirmation__page">
-      <div class="confirmation">
+    <div class="page confirmation__page">
+      <div class="block confirmation__block">
         <button class="btn confirmation__btn">
           The test is over. Click for result
         </button>
@@ -61,8 +63,8 @@
     </div>
 
     <!-------RESULT PAGE--------->
-    <div class="result__page">
-      <div class="start__form result__block">
+    <div class="page result__page">
+      <div class="block result__block">
         <h3 class="result__title">Results</h3>
         <div class="result__info"></div>
         <button class="btn result-newStart__btn">Run the test again</button>
@@ -79,5 +81,5 @@
     <script src="./js/three.min.js"></script>
     <script src="./js/vanta.waves.min.js"></script>
     <script src="./js/app.js"></script>
-  </body>
+    </body>
 </html>

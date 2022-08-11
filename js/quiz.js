@@ -6,8 +6,6 @@ const headerContainer = document.querySelector('.quiz-header');
 const listContainer = document.querySelector('.quiz-list');
 const submitBtn = document.querySelector('.quiz__btn');
 
-console.log("come in");
-
 let rightAnswers = 0;
 let questionIndex = 0;
 
@@ -16,21 +14,19 @@ submitBtn.addEventListener('click', () => clickReply());
 function clearPage() {
   headerContainer.innerHTML = '';
   listContainer.innerHTML = '';
-  console.log("clear");
 }
 
 function showQuestion() {
   // Question
   const title = questions[questionIndex]['question'];
   headerContainer.innerHTML = `<h2 class="quiz__title">${title}</h2>`;
-  console.log("qa");
 
   // Answers
   questions[questionIndex]["answers"].map((el, index) => {
     const list = 
     `<li  class="quiz-list__item">
       <label class="quiz-list__label">
-        <input type="radio" value=${index + 1} class="answer" name="answer"/>
+        <input type="radio" value=${index + 1} class="quiz-list__input" name="answer"/>
         <span class="quiz-list__answer">${el}</span>
       </label>
     </li>`;
@@ -66,7 +62,6 @@ function clickReply() {
     confirmationPage.style.display = 'block';
     rightAnswers = 0;
     questionIndex = 0;
-    console.log("go out")
     showQuestion();
   }
 }

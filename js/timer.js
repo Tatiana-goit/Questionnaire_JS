@@ -1,23 +1,28 @@
 const timeEl = document.querySelector('.time');
-const resultPage = document.querySelector('.result__page');
 const quizPage = document.querySelector('.quiz__page');
+const confirmationPage = document.querySelector('.confirmation__page');
 const simpleTestBtn = document.querySelector('.simpleTest');
-const difficultTestBtn = document.querySelector('.difficultTest');
+const confirmationBtn = document.querySelector('.confirmation__btn');
 
+simpleTestBtn.addEventListener('click', () => Timer());
 
-simpleTestBtn.addEventListener('click', () => {
+function Timer() {
   let time = 10;
+  timeEl.innerHTML = `00:00`;
   let timerId = setInterval(() => {
-    const minutes = Math.floor(time / 60);
+    let minutes = Math.floor(time / 60);
     let seconds = time % 60;
     seconds = seconds < 10 ? '0' + seconds : seconds;
     timeEl.innerHTML = `${minutes}:${seconds}`;
     time--;
     if (time < 0) {
-      clearInterval(timerId);
       quizPage.style.display = 'none';
-      resultPage.style.display = 'block';
+      confirmationPage.style.display = 'block';
       return;
     }
   }, 1000);
-});
+
+  confirmationBtn.addEventListener('click', () => {
+    clearInterval(timerId);
+  });
+}

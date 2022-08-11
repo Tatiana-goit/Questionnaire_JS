@@ -19,8 +19,8 @@
 	},
 	{
 		"id": 3,
-		"question": "Вопрос 4",
-		"answers": ["4a", "4b", "4c", "4d"],
+		"question": "What is syntax for use Java Script expression in string interpolation?",
+		"answers": ["${...}", "{...}", "{{...}}", "&{...}"],
 		"correct": 1
 	}
 ]
