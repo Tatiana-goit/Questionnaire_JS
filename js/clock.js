@@ -14,6 +14,7 @@ window.onload = function () {
         seconds = `0${seconds}`;
       }
   
+      
       let clock = `${hours}:${minutes}:${seconds}`;
       document.querySelector('.clock').innerHTML = clock;
   
