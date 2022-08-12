@@ -6,10 +6,17 @@ const headerContainer = document.querySelector('.quiz-header');
 const listContainer = document.querySelector('.quiz-list');
 const submitBtn = document.querySelector('.quiz__btn');
 
+const modal = document.querySelector('.quiz__modal');
+const chooseBtn = document.querySelector('.quiz__btn-choose');
+chooseBtn.addEventListener('click', () => chooseBtn.style.display = 'none');
+listContainer.addEventListener('click', () => chooseBtn.style.display = 'none');
+
+
 let rightAnswers = 0;
 let questionIndex = 0;
 let index = 0;
 let arrayOfAnswers = [];
+let checkModal = false;
 
 submitBtn.addEventListener('click', () => onClickReply());
 
@@ -45,8 +52,7 @@ function onClickReply() {
   const checedRadioBtn = listContainer.querySelector('input:checked');
 
   if (!checedRadioBtn) {
-    submitBtn.blur();
-    alert('Choose an answer');
+    chooseBtn.style.display = 'block';
     return;
   }
 
