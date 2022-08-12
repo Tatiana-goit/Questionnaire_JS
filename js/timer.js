@@ -7,9 +7,9 @@ const confirmationBtn = document.querySelector('.confirmation__btn');
 simpleTestBtn.addEventListener('click', () => startTimer());
 
 function startTimer() {
-  let time = 10;
-  // let time = 240;
-  timeEl.innerHTML = `00:00`;
+  // let time = 10;
+  let time = 240;
+  timeEl.innerHTML = `0:00`;
   let timerId = setInterval(() => {
     let minutes = Math.floor(time / 60);
     let seconds = time % 60;
