@@ -11,12 +11,9 @@ const chooseBtn = document.querySelector('.quiz__btn-choose');
 chooseBtn.addEventListener('click', () => chooseBtn.style.display = 'none');
 listContainer.addEventListener('click', () => chooseBtn.style.display = 'none');
 
-
 let rightAnswers = 0;
 let questionIndex = 0;
-let index = 0;
 let arrayOfAnswers = [];
-let checkModal = false;
 
 submitBtn.addEventListener('click', () => onClickReply());
 
@@ -89,6 +86,9 @@ function onClickReply() {
 
 clearPage();
 showQuestion();
+
+
+
 
 // const URL =
 //   'https://docs.google.com/spreadsheets/d/e/2PACX-1vT15nH81WQdOfeDMIwFoHUbDYeiYzK8JdmEd9_Ui2aHWtNWD3s1spHszZxrGI2LgG9bAzBe5ZXd0iRY/pub?gid=0&single=true&output=tsv';
